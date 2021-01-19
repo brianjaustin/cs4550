@@ -2,7 +2,7 @@
 // but modified to be compatible with the latest version of Vultr TF provider.
 
 resource "vultr_instance" "cs4550_box" {
-    region            = "EWR" // NJ
+    region            = "ewr" // NJ
     plan              = "vc2-1c-1gb"
     os_id             = "352" // Debian 10 x64 (buster)
     ssh_key_ids       = [vultr_ssh_key.abyssinia_ssh_key.id]
@@ -19,7 +19,7 @@ resource "vultr_firewall_rule" "ssh" {
     firewall_group_id = vultr_firewall_group.web_dev.id
     ip_type           = "v4"
     subnet            = "24.61.109.194"
-    subnet_size       = 0
+    subnet_size       = 32
     protocol          = "tcp"
     port              = "22"
 }
