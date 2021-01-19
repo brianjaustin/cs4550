@@ -3,12 +3,11 @@
 
 resource "vultr_instance" "cs4550_box" {
     region            = "EWR" // NJ
-    plan              = 201   // 1 GB RAM, $5/month
-    os_id             = 352   // Debian 10 x64 (buster)
+    plan              = "vc2-1c-1gb"
+    os_id             = "352" // Debian 10 x64 (buster)
     ssh_key_ids       = [vultr_ssh_key.abyssinia_ssh_key.id]
     hostname          = "cs4550"
     tag               = "debian"
-    ddos_protection   = true
     firewall_group_id = vultr_firewall_group.web_dev.id
 }
 
