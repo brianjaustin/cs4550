@@ -1,0 +1,3 @@
+[submodule "hw01"]
+	path = hw01
+	url = git@github.com:brianjaustin/cs4550-hw01.git
