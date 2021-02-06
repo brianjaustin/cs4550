@@ -7,4 +7,16 @@
     pkg:
       - esl-erlang
       - elixir
+- name: Add Nodesource GPG key
+  apt_key:
+    url: https://deb.nodesource.com/gpgkey/nodesource.gpg.key
+- name: Add Nodesource debian repo
+  apt_repository:
+    repo: deb https://deb.nodesource.com/node_15.x buster main
+- name: Install NodeJS via Nodesource repo
+  apt:
+    update_cache: yes
+    pkg:
+      - nodejs
+
 
