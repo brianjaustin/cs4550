@@ -1,0 +1,10 @@
+- name: Add Erlang Solutions repository
+  apt:
+    deb: https://packages.erlang-solutions.com/erlang-solutions_2.0_all.deb
+- name: Install Erlang and Elixir
+  apt:
+    update_cache: yes
+    pkg:
+      - esl-erlang
+      - elixir
+
