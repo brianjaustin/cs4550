@@ -12,7 +12,7 @@
     url: https://deb.nodesource.com/gpgkey/nodesource.gpg.key
 - name: Add Nodesource debian repo
   apt_repository:
-    repo: deb https://deb.nodesource.com/node_15.x buster main
+    repo: deb https://deb.nodesource.com/node_14.x buster main
 - name: Install NodeJS via Nodesource repo
   apt:
     update_cache: yes
