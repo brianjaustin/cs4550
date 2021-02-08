@@ -1,0 +1,40 @@
+- name: Create the user for app deployment
+  user:
+    name: "{{ site_name }}"
+    comment: CS4550 {{ site_name }}
+    expires: -1
+- name: Install git
+  apt:
+    name: git
+- name: Clone app source
+  git:
+    repo: "https://github.com/brianjaustin/cs4550-{{ site_name }}"
+    dest: /home/{{ site_name }}/app
+  become_user: "{{ site_name }}"
+- name: Build application
+  shell: /bin/bash -lc "./build.sh" >> build.log
+  args:
+    chdir: /home/{{ site_name }}/app
+    creates: /home/{{ site_name }}/app/build.log
+  become_user: "{{ site_name }}"
+- name: Create systemd service
+  template:
+    src: templates/service.j2
+    dest: /etc/systemd/system/{{ site_name }}.service
+    owner: root
+    group: root
+    mode: '644'
+  notify: Restart systemd
+- name: Create nginx config
+  template:
+    src: templates/site.nginx.j2
+    dest: /etc/nginx/sites-available/{{ site_name }}.baustin-neu.site
+    owner: root
+    group: root
+    mode: '644'
+- name: Enable nginx site
+  file:
+    src: /etc/nginx/sites-available/{{ site_name }}.baustin-neu.site
+    dest: /etc/nginx/sites-enabled/{{ site_name }}.baustin-neu.site
+    state: link
+  notify: Restart nginx

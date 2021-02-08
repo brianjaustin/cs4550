@@ -1,0 +1,9 @@
+- name: Restart systemd
+  systemd:
+    name: "{{ site_name }}"
+    state: started
+    enabled: yes
+- name: Restart nginx
+  systemd:
+    name: nginx
+    state: restarted
