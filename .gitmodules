@@ -7,3 +7,6 @@
 [submodule "hw03"]
 	path = hw03
 	url = git@github.com:brianjaustin/cs4550-hw03.git
+[submodule "hw04"]
+	path = hw04
+	url = git@github.com:brianjaustin/cs4550-hw04.git
