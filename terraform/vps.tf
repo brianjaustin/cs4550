@@ -11,11 +11,6 @@ resource "vultr_instance" "cs4550_box" {
     firewall_group_id = vultr_firewall_group.web_dev.id
 }
 
-resource "vultr_snapshot" "cs4550_hw3" {
-    instance_id = vultr_instance.cs4550_box.id
-    description = "Homework 03 snapshot (2)"
-}
-
 resource "vultr_snapshot" "cs4550_hw4" {
     instance_id = vultr_instance.cs4550_box.id
     description = "Homework 04 snapshot"
