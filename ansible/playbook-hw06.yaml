@@ -1,0 +1,8 @@
+- hosts: all
+  become: yes
+  roles:
+    - role: cs4550_elixir
+    - role: cs4550_phoenix
+      vars:
+        site_name: hw06
+        service_port: 4794
