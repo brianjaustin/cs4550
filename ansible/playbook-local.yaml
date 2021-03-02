@@ -2,3 +2,4 @@
   become: yes
   roles:
     - cs4550_elixir
+    - cs4550_postgres

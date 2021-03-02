@@ -16,3 +16,6 @@
 [submodule "hw06"]
 	path = hw06
 	url = git@github.com:brianjaustin/cs4550-hw06.git
+[submodule "events"]
+	path = events
+	url = git@github.com:brianjaustin/cs4550-events.git
