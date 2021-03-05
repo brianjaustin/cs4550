@@ -1,0 +1,9 @@
+- hosts: all
+  become: yes
+  roles:
+    - role: cs4550_elixir
+    - role: cs4550_postgres
+    - role: cs4550_phoenix
+      vars:
+        site_name: events
+        service_port: 4796
