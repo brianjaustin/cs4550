@@ -21,4 +21,7 @@
 	url = git@github.com:brianjaustin/cs4550-events.git
 [submodule "spotifriend-experiments"]
 	path = spotifriend-experiments
-	url = https://github.com/brianjaustin/spotifriend-experiments.git
+	url = git@github.com:brianjaustin/spotifriend-experiments.git
+[submodule "events-spa"]
+	path = events-spa
+	url = git@github.com:brianjaustin/cs4550-events-spa.git
