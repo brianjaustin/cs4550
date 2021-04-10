@@ -25,3 +25,6 @@
 [submodule "events-spa"]
 	path = events-spa
 	url = git@github.com:brianjaustin/cs4550-events-spa.git
+[submodule "melody-match"]
+	path = melody-match
+	url = git@github.com:brianjaustin/melody-match.git
