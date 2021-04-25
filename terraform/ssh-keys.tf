@@ -1,4 +1,0 @@
-resource "vultr_ssh_key" "abyssinia_ssh_key" {
-    name    = "abyssinia-ssh-key"
-    ssh_key = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQC6TEhYMA5YM/iT46vcbERfuVIHa0gFlfVpUmtY7f2K7/9T/c7OGOCnYA0RPzQAN7zUBZ8gxxf40+putNrdKiWbuV5ehcVULu3sTD8cSsom6PQm3wXV6iPUXK1nZEfcrOTbdFtPuDvGBrfWgtNeG3JmidFL6NtE1V1N2oO7TMZQq+1+NUo+t8PhntuL+ViAe9tMOws/JQH+WGqXLH5/eusrh1GCjPyfL2cp5feyX0nTSLxy9zxrBjNOpkvax1nlIHkC3+FJUquXejJb1RAnqbrsV2FOYpZKTpl+tBUypKEdPHowaul1O0rEIv0VNdFGJ1GXW8DPEsbPod6DgUyXbc08zoWfrNzllD1S1ZLWxV0hhoTuVF1T+zdfGbqUWYmF8Nfy2IMufFfkCN2QZtpn/tR/HVY+NrQczDneokI2+KvelDlrOySlodH8m56ls+8zMzpaJ34Cvgj+fJRrpV/g7xN3Sh/3GWvdDxF3tkqwLyL3A8CQBAoX41gWJ8qXFZCGbn0= brian@abyssinia"
-}
